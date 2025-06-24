@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Vanta Background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .s-page-1 .s-section-1 .s-section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .portfolio-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .portfolio-content h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 10px black;
+      }
+
+      .portfolio-content p {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+        text-shadow: 1px 1px 5px black;
+      }
+
+      .portfolio-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 15px;
+        width: 250px;
+        text-align: left;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card h2 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        color: #ffebcd;
+      }
+
+      .card p {
+        font-size: 1em;
+        color: #f0f0f0;
+      }
+      .project-links {
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+}
+
+.project-links h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px black;
+}
+
+.project-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-links li {
+  margin: 10px 0;
+}
+
+.project-links a {
+  color: #ebeae5;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="s-page-1">
+      <div class="s-section-1">
+        <div class="s-section"></div>
+      </div>
+    </div>
+
+    <div class="portfolio-content">
+      <h1>Hi, I'm Lavanya 👩‍💻</h1>
+      <p>
+        A passionate software developer willing to blend new technologies for bringing up solutions.
+        </p>
+        <p> Keen on woking with MERN stack applications and build scalable applications
+      </p>
+
+     <div class="portfolio-cards">
+  <div class="card">
+    <h2>Web Development</h2>
+    <p>Built responsive websites using HTML, CSS, JavaScript, Django, and Express.js.</p>
+  </div>
+  <div class="card">
+    <h2>Data Analysis</h2>
+    <p>Created interactive dashboards in Power BI & Tableau to visualize crime clearance and student performance data.</p>
+  </div>
+  <div class="card">
+    <h2>IoT Projects</h2>
+    <p>Implemented smart fire alarm, patient-assist gripper, and baby condition monitoring using Arduino & ML.</p>
+  </div>
+</div>
+<div class="project-links">
+  <h2>Project Links</h2>
+  <ul>
+    <li><a href="https://github.com/LavanyaMuraleedharan/react-abhyazproject" target="_blank"> Web Development Project</a></li>
+    <li> Data Analysis Dashboard 
+      <img src="image.png" style="width: 100px; height: 50px;"/>
+    </li>
+    <li><a href="https://github.com/yourusername/iot-fire-alarm" target="_blank"> IoT Fire Alarm System</a></li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+      var vantaEffect;
+      var setVanta = () => {
+        if (vantaEffect) vantaEffect.destroy();
+        vantaEffect = VANTA.BIRDS({
+          el: ".s-page-1 .s-section-1 .s-section",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color1: 0x8e3838,
+        });
+      };
+      setVanta();
+    </script>
+  </body>
+</html>
